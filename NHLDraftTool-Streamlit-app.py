@@ -18,15 +18,15 @@ st.write("""
 # National Hockey League (NHL) Draft Tool (Alpha)
 ### By Sean Farquharson
 
-This app does not apply to top 10 ranked draft picks. 
+This app does not apply to top 10 ranked draft picks.
 
-This app predicts an NHL Draft prospects likelihood of playing in the NHL! 
+This Machine Learning application predicts an NHL Draft prospects likelihood of playing in the NHL! It classifies them as "yes", most likely to play in the NHL, or "no", not likely to play in the NHL. 
 
-This app is experimental. Several enhancements will be made to the underlying modeling procedure to make the tool more reliable.
+This app is experimental.
 
 ## Quick User Guide
 
-1) If uploading a csv file, please ensure column names are correct.
+1) If uploading a csv file, please ensure column names are correct. This allows you to make several predictions at once!
 
 2) Calculations
 - Player Size in Draft Year = Height(inches) in draft year + Weight(lbs) in draft year
@@ -34,18 +34,18 @@ This app is experimental. Several enhancements will be made to the underlying mo
 - Assists Per Game = Assists/ Games Played
 - PIMs Per Game = PIMs/ Games Played
 
-3) The application can be used for several functions including but not limited to:
+3) This application can be used for several functions including but not limited to:
 - To build on to a player scouting profile.
 - As a draft ranking tool, ranking by the predicted probability.
 - Identifying underrated draft prospects.
 - To gain insight into an ideal draft prospect by playing with the tool.
-- To further distinguish between draft candidates for team scouting purposes, making a data-driven decision on draft selections.
+- To further distinguish between draft candidates for team scouting purposes, making data-driven decisions on draft selections.
 - As a tool to aid in player development.
 
 4) This tool may be updated or further improved upon in the future. Please send comments and/or inquiries to *sfarqu2@uwo.ca*.
 
 
-Data was collected from NHL.com, Eliteprospects and thedraftanalyst.com. Obtained from https://github.com/liuyejia/Model_Trees_Full_Dataset
+Data was collected from NHL.com, Eliteprospects and thedraftanalyst.com. See my GitHub for more info on the underlying modeling process: https://github.com/SeanFarquharson
 
 """)
 
