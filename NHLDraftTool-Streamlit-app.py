@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[18]:
 
 
 import streamlit as st
@@ -11,7 +11,7 @@ import pickle
 from sklearn.ensemble import RandomForestClassifier
 
 
-# In[7]:
+# In[19]:
 
 
 st.write("""
@@ -52,7 +52,7 @@ Data was collected from NHL.com, Eliteprospects and thedraftanalyst.com. Obtaine
 st.sidebar.header('User Input Features')
 
 
-# In[8]:
+# In[20]:
 
 
 # Collects user input features into dataframe
@@ -80,16 +80,16 @@ else:
     input_df = user_input_features()
 
 
-# In[9]:
+# In[21]:
 
 
 # Combine user input features with entire data set for encoding phase
-NHL_raw = pd.read_csv(r'C:\Users\seanf\OneDrive\Documents\SUMMER RESEARCH PROJECT\data\NHLDraft_clean_for_web_app_streamlit.csv')
+NHL_raw = pd.read_csv('https://raw.githubusercontent.com/SeanFarquharson/NHL-Draft-Tool/main/NHLDraft_clean_for_web_app_streamlit.csv')
 NHL = NHL_raw.drop(columns=['NHL_GP_Greater_Than_0'])
 df = pd.concat([input_df,NHL],axis=0)
 
 
-# In[10]:
+# In[22]:
 
 
 # Encode
@@ -101,7 +101,7 @@ for col in encode:
 df = df[:1] #select only first row, the user input data
 
 
-# In[11]:
+# In[23]:
 
 
 # Display user input features
@@ -114,14 +114,14 @@ else:
     st.write(df)
 
 
-# In[13]:
+# In[24]:
 
 
 # Read in saved RF model from pickle file
-load_clf = pickle.load(open(r'C:\Users\seanf\OneDrive\Documents\SUMMER RESEARCH PROJECT\data\NHLPicks_clf.pkl', 'rb'))
+load_clf = pickle.load(open('NHLPicks_clf.pkl', 'rb'))
 
 
-# In[14]:
+# In[25]:
 
 
 # Apply model to predict
